@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/img/icono.jpg">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Document</title>
+    <link rel="icon" href="assets/img/icono.jpg">
+</head>
+
+<body>
+    <header>
+        <h2>LOGO</h2>
+        <h3><a href="../index.html">Volver</a></h3>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="./partidos.html">Partidos actuales</a></li>
+            <li><a href="./historia.html">Historia</a></li>
+            <li><a href="./tienda.html">Tienda</a></li>
+            <li><a href="./contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+    <!-- Formulario para ingresar datos -->
+    <main>
+        <fieldset>
+            <legend>Ingrese sus datos</legend>
+            <form>
+
+                <!-- Datos de la personales -->
+
+                <div>
+                    <label for="nombre">Ingrese su nombre:</label>
+                    <input type="nombre" placeholder="Luis Rodriguez" name="nombre" required>
+                    <br>
+                    <label for="email">Ingrese su mail:</label>
+                    <input type="email" placeholder="ejemplo@gmail.com" name="email" required>
+                    <br>
+                </div>
+
+                <div>
+                    <p id="resaltar">Sexo:</p>
+                    <div>Masculino
+                        <input type="radio" name="sexo" value="masculino">
+                    </div>
+                    <div>Femenino
+                        <input type="radio" name="sexo" value="femenino">
+                    </div>
+                    <div>Prefiero no decirlo
+                        <input type="radio" name="sexo" value="no_dice">
+                    </div>
+                </div>
+                <br>
+
+                <!-- Preguntas especificas -->
+
+                <label for="Preguntas"> Preguntas que nos quieras hacer:<br>
+                    <textarea placeholder="Preguntas"></textarea>
+                </label>
+                <br>
+
+                <div>¿Quieres recibir publicidad nuestra a tu mail?
+                    <input type="checkbox" name="acepta" value="1">
+                </div>
+                <br>
+                <input class="boton" type="submit" value="Confirmar">
+                <input class="boton" type="reset" value="Resetear información">
+            </form>
+        </fieldset>
+    </main>
+
+
+
+    <footer>
+
+    </footer>
+</body>
+
+</html>

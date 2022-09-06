@@ -1,0 +1,347 @@
+* {
+    margin: 0;
+    padding: 0;
+    background-color: #76949F;
+    font-family: roboto;
+
+}
+
+/* Importacion de fuentes*/
+@font-face {
+    font-family: roboto;
+    src: url(../assets/fonts/Roboto-Medium.ttf);
+}
+
+@font-face {
+    font-family: helvetica;
+    src: url(../assets/fonts/coolveticarg.otf);
+}
+
+/* ESILOS GENERALES */
+header {
+    grid-area: header;
+    padding-left: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(../assets/img/footer.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    border-bottom-style: solid;
+}
+
+footer {
+    grid-area: footer;
+
+}
+
+nav {
+    grid-area: nav;
+    padding-right: 5px;
+    padding-left: 7px;
+    padding-top: 5px;
+    border-right-style: solid;
+    background-color: #052c3a;
+
+}
+
+h1 {
+    color: #040955;
+}
+
+
+/* ESTILOS INDEX */
+
+#body-index {
+    width: 95%vw;
+    height: 200vh;
+    display: grid;
+    grid-template-rows: repeat(4 1fr) .5fr 1fr;
+    grid-template-columns: repeat(4 1fr);
+    grid-template-areas: "header header header header"
+        "nav parrafo parrafo parrafo"
+        "nav primer-slide primer-slide primer-slide"
+        "nav sdo-slide sdo-slide sdo-slide"
+        "nav tabla tabla tabla"
+        "footer footer footer footer";
+}
+
+
+#parrafo {
+    width: 97%;
+    grid-area: parrafo;
+    padding: 10px;
+    padding-left: 15px;
+    margin-bottom: 15px;
+}
+
+#fotos {
+    padding-left: 15px;
+
+}
+
+#fotos-uno {
+    width: 95%;
+    grid-area: primer-slide;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border: solid 3px black;
+}
+
+#fotos-dos {
+    width: 95%;
+    grid-area: sdo-slide;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    flex-wrap: wrap;
+    border: solid 3px black;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+    top: 5px;
+    background-color: #052c3a;
+
+}
+
+nav ul li {
+    background-color: #022F40;
+    padding: 4px;
+    border: outset 2px black;
+    border-radius: 3px;
+    margin: 3px;
+    list-style-type: none;
+}
+
+nav ul li a {
+    font-size: x-large;
+    background-color: #022F40;
+    color: #9bceb0;
+    text-decoration: none;
+}
+
+#tabla {
+    width: 95%;
+    grid-area: tabla;
+    padding: 10px;
+    padding-left: 15px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+}
+
+#tabla a {
+    font-size: x-large;
+    color: #022F40;
+    text-decoration: none;
+    text-align: center;
+    padding-top: 10px;
+}
+
+
+/* ESTILOS DE FOOTER */
+footer {
+    margin: 0;
+    padding: 0;
+    background-image: url("../assets/img/footer.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-top-style: solid;
+    
+}
+
+/* MEDIA QUERY */
+
+@media only screen and (max-width:480px ){
+    #body-index {
+        display: grid;
+        grid-template-rows: repeat(4 1fr) .5fr 1fr;
+        grid-template-columns: repeat(4 1fr);
+        grid-template-areas: "header header header header"
+            "nav parrafo parrafo parrafo"
+            "nav primer-slide primer-slide primer-slide"
+            "nav sdo-slide sdo-slide sdo-slide"
+            "nav tabla tabla tabla"
+            "footer footer footer footer";
+    }
+    nav{
+        width: 50%;
+
+
+    }
+    #parrafo {
+        padding: 10px;
+        margin-bottom: 5px;
+    }
+}
+
+/* FIN ESTILOS INDEX */
+
+
+
+/* ESTILOS PARTIDOS */
+
+#body-partidos {
+    width: 95%vw;
+    height: 280vh;
+    display: grid;
+    grid-template-rows: repeat(5 1fr);
+    grid-template-columns: repeat(4 1fr);
+    grid-template-areas: "header header header header"
+        "nav tablas tablas tablas"
+        "nav tablas tablas tablas"
+        "nav videos videos videos"
+        "footer footer footer footer";
+
+}
+
+#tabla-partidos {
+    grid-area: tablas;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+}
+.fotos-partidos{
+    border: double 3px black;
+}
+
+#videos {
+    grid-area: videos;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.titulo-partidos{
+    padding: 4px;
+    padding-left: 15px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    color: #022F40;
+}
+
+
+/* .body-partidos{
+    height: 300vh;
+}
+main fieldset form{
+    margin: 7px;
+    padding: 5px;   
+}
+#tabla-partidos{
+    background-color: #76949F;
+}
+.tabla-partidos-2{
+    background-color: #76949F;
+}
+#resumen{
+    color: #022F40;
+    font-family: helvetica;
+    font: bolder;
+    border: solid 3px #022F40;
+    float: left;
+    padding: 5px;
+    margin-right: 7px;
+    margin-bottom: 2px; 
+} */
+
+/* FIN ESTILOS PARTIDOS */
+
+
+
+/* ESTILOS HISTORIA */
+#body-historia {
+    width: 95%vw;
+    height: 200vh;
+    display: grid;
+    grid-template-rows: repeat(5 1fr);
+    grid-template-columns: repeat(4 1fr);
+    grid-template-areas: "header header header header"
+                         "nav parrafo-uno parrafo-uno fotos-uno"
+                         "nav parrafo-dos parrafo-dos parrafo-dos"
+                         "nav fotos-dos fotos-dos fotos-dos"
+                         "footer footer footer footer";
+
+}
+
+#parrafo-uno{
+    grid-area: parrafo-uno;
+    padding: 10px;
+    border: 3px double rgb(42, 150, 238);
+    margin: 10px;
+}
+#fotos-historia-1{
+    grid-area: fotos-uno;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 95%;
+    
+}
+#parrafo-dos{
+    grid-area: parrafo-dos;
+    padding: 10px;
+    border: 3px double rgb(42, 150, 238);
+    margin: 10px;
+}
+#fotos-historia-2{
+    grid-area: fotos-dos;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  
+}
+
+/* ESTILOS TIENDA */
+
+#body-historia {
+    width: 95%vw;
+    height: 200vh;
+    display: grid;
+    grid-template-rows: repeat(4 1fr);
+    grid-template-columns: repeat(3 1fr);
+    grid-template-areas: "header header header "
+                         "nav camisetas forms"
+                         "nav camisetas forms "
+                         "footer footer footer ";
+
+}
+#fotos-camisetas{
+    grid-area: camisetas;
+}
+#formula{
+    grid-area: forms;
+}
+
+/* ESTILOS HISTORIA */
+/* #titulo-resumen{
+    margin: 10px;
+    margin-left: 15px;
+}
+.tablas{
+    background-color: #76949F;
+} */
+/* FIN ESTILOS HISTORIA */
+
+/* ESTILOS CONTACTO */
+/* #resaltar{
+    color:#A4F9C8;
+}
+.boton{
+    padding: 5px;
+    background-color: #A4F9C8;
+    font-size: medium;
+    font-weight: bolder;
+} */
+/* FIN ESTILOS CONTACTO */
