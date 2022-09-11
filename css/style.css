@@ -19,6 +19,7 @@
 
 /* ESILOS GENERALES */
 header {
+    width: 100%;
     grid-area: header;
     padding-left: 5px;
     display: flex;
@@ -55,7 +56,7 @@ h1 {
 /* ESTILOS INDEX */
 
 #body-index {
-    width: 95%vw;
+    width: 99%;
     height: 200vh;
     display: grid;
     grid-template-rows: repeat(4 1fr) .5fr 1fr;
@@ -155,84 +156,126 @@ footer {
     background-repeat: no-repeat;
     background-size: cover;
     border-top-style: solid;
-    
+
 }
 
 /* MEDIA QUERY */
 
-@media only screen and (max-width:480px ){
+@media only screen and (max-width:480px) {
     #body-index {
+        height: 250vh;
         display: grid;
-        grid-template-rows: repeat(4 1fr) .5fr 1fr;
+        grid-template-rows: .5fr repeat(5 1fr);
         grid-template-columns: repeat(4 1fr);
         grid-template-areas: "header header header header"
-            "nav parrafo parrafo parrafo"
-            "nav primer-slide primer-slide primer-slide"
-            "nav sdo-slide sdo-slide sdo-slide"
-            "nav tabla tabla tabla"
+            "nav nav nav nav"
+            "parrafo parrafo parrafo parrafo"
+            "primer-slide primer-slide primer-slide primer-slide"
+            "sdo-slide sdo-slide sdo-slide sdo-slide"
+            "tabla tabla tabla tabla"
             "footer footer footer footer";
     }
-    nav{
-        width: 50%;
 
+    nav {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-bottom: 2px solid ;
+    }
+
+    header {
+        width: 100%;
+    }
+
+    nav ul li a {
+        font-size: large;
+    }
+}
+
+
+    /* FIN ESTILOS INDEX */
+
+
+
+    /* ESTILOS PARTIDOS */
+
+    #body-partidos {
+        width: 95%;
+        height: 280vh;
+        display: grid;
+        grid-template-rows: repeat(5 1fr);
+        grid-template-columns: repeat(4 1fr);
+        grid-template-areas: "header header header header"
+            "nav tablas tablas tablas"
+            "nav tablas tablas tablas"
+            "nav videos videos videos"
+            "footer footer footer footer";
 
     }
-    #parrafo {
+
+    #tabla-partidos {
+        grid-area: tablas;
         padding: 10px;
-        margin-bottom: 5px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+
     }
-}
 
-/* FIN ESTILOS INDEX */
+    .fotos-partidos {
+        border: double 3px black;
+    }
 
+    #videos {
+        grid-area: videos;
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
 
-
-/* ESTILOS PARTIDOS */
-
-#body-partidos {
-    width: 95%vw;
-    height: 280vh;
-    display: grid;
-    grid-template-rows: repeat(5 1fr);
-    grid-template-columns: repeat(4 1fr);
-    grid-template-areas: "header header header header"
-        "nav tablas tablas tablas"
-        "nav tablas tablas tablas"
-        "nav videos videos videos"
-        "footer footer footer footer";
-
-}
-
-#tabla-partidos {
-    grid-area: tablas;
-    padding: 10px;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    
-}
-.fotos-partidos{
-    border: double 3px black;
-}
-
-#videos {
-    grid-area: videos;
-    padding: 10px;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-.titulo-partidos{
-    padding: 4px;
-    padding-left: 15px;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    color: #022F40;
-}
+    .titulo-partidos {
+        padding: 4px;
+        padding-left: 15px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        color: #022F40;
+    }
 
 
-/* .body-partidos{
+    /* MEDIA QUERY */
+    @media only screen and (max-width:480px) {
+        #body-partidos {
+            width: 100%;
+            height: 420vh;
+            display: grid;
+            grid-template-rows: .5fr repeat(3 1fr);
+            grid-template-columns: repeat(4 1fr);
+            grid-template-areas: "header header header header"
+                "nav nav nav nav"
+                "tablas tablas tablas tablas"
+                "videos videos videos videos"
+                "footer footer footer footer";
+        }
+
+        nav {
+            height: 40%;
+        }
+
+        nav ul {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+
+
+
+
+    }
+
+    /* .body-partidos{
     height: 300vh;
 }
 main fieldset form{
@@ -256,86 +299,111 @@ main fieldset form{
     margin-bottom: 2px; 
 } */
 
-/* FIN ESTILOS PARTIDOS */
+    /* FIN ESTILOS PARTIDOS */
 
 
 
-/* ESTILOS HISTORIA */
-#body-historia {
-    width: 95%vw;
-    height: 200vh;
-    display: grid;
-    grid-template-rows: repeat(5 1fr);
-    grid-template-columns: repeat(4 1fr);
-    grid-template-areas: "header header header header"
-                         "nav parrafo-uno parrafo-uno fotos-uno"
-                         "nav parrafo-dos parrafo-dos parrafo-dos"
-                         "nav fotos-dos fotos-dos fotos-dos"
-                         "footer footer footer footer";
+    /* ESTILOS HISTORIA */
+    #body-historia {
+        width: 95%vw;
+        height: 200vh;
+        display: grid;
+        grid-template-rows: repeat(5 1fr);
+        grid-template-columns: repeat(4 1fr);
+        grid-template-areas: "header header header header"
+            "nav parrafo-uno parrafo-uno fotos-uno"
+            "nav parrafo-dos parrafo-dos parrafo-dos"
+            "nav fotos-dos fotos-dos fotos-dos"
+            "footer footer footer footer";
 
-}
+    }
 
-#parrafo-uno{
-    grid-area: parrafo-uno;
-    padding: 10px;
-    border: 3px double rgb(42, 150, 238);
-    margin: 10px;
-}
-#fotos-historia-1{
-    grid-area: fotos-uno;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    width: 95%;
-    
-}
-#parrafo-dos{
-    grid-area: parrafo-dos;
-    padding: 10px;
-    border: 3px double rgb(42, 150, 238);
-    margin: 10px;
-}
-#fotos-historia-2{
-    grid-area: fotos-dos;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-  
-}
+    #parrafo-uno {
+        grid-area: parrafo-uno;
+        padding: 10px;
+        border: 3px double rgb(42, 150, 238);
+        margin: 10px;
+    }
 
-/* ESTILOS TIENDA */
+    #fotos-historia-1 {
+        grid-area: fotos-uno;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        width: 95%;
 
-#body-historia {
-    width: 95%vw;
-    height: 200vh;
-    display: grid;
-    grid-template-rows: repeat(4 1fr);
-    grid-template-columns: repeat(3 1fr);
-    grid-template-areas: "header header header "
-                         "nav camisetas forms"
-                         "nav camisetas forms "
-                         "footer footer footer ";
+    }
 
-}
-#fotos-camisetas{
-    grid-area: camisetas;
-}
-#formula{
-    grid-area: forms;
-}
+    #parrafo-dos {
+        grid-area: parrafo-dos;
+        padding: 10px;
+        border: 3px double rgb(42, 150, 238);
+        margin: 10px;
+    }
 
-/* ESTILOS HISTORIA */
-/* #titulo-resumen{
+    #fotos-historia-2 {
+        grid-area: fotos-dos;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+
+    }
+
+    /* ESTILOS TIENDA */
+
+    #body-historia {
+        width: 95%vw;
+        height: 200vh;
+        display: grid;
+        grid-template-rows: repeat(4 1fr);
+        grid-template-columns: repeat(3 1fr);
+        grid-template-areas: "header header header "
+            "nav camisetas forms"
+            "nav camisetas forms "
+            "footer footer footer ";
+
+    }
+
+    #fotos-camisetas {
+        grid-area: camisetas;
+    }
+
+    #formula {
+        grid-area: forms;
+    }
+
+
+    /* MEDIA QUERY */
+    @media only screen and (max-width:480px) {
+        #body-historia {
+            width: 95%vw;
+            height: 370vh;
+            display: grid;
+            grid-template-rows: repeat(5 1fr);
+            grid-template-columns: repeat(4 1fr);
+            grid-template-areas: "header header header header"
+                "nav parrafo-uno parrafo-uno fotos-uno"
+                "nav parrafo-dos parrafo-dos parrafo-dos"
+                "nav fotos-dos fotos-dos fotos-dos"
+                "footer footer footer footer";
+
+        }
+
+
+    }
+
+    /* ESTILOS HISTORIA */
+    /* #titulo-resumen{
     margin: 10px;
     margin-left: 15px;
 }
 .tablas{
     background-color: #76949F;
 } */
-/* FIN ESTILOS HISTORIA */
+    /* FIN ESTILOS HISTORIA */
 
-/* ESTILOS CONTACTO */
-/* #resaltar{
+    /* ESTILOS CONTACTO */
+    /* #resaltar{
     color:#A4F9C8;
 }
 .boton{
@@ -344,4 +412,4 @@ main fieldset form{
     font-size: medium;
     font-weight: bolder;
 } */
-/* FIN ESTILOS CONTACTO */
+    /* FIN ESTILOS CONTACTO */
