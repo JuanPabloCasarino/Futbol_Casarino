@@ -7,17 +7,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="assets/img/icono.jpg">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <title>Document</title>
-    <link rel="icon" href="assets/img/icono.jpg">
+
 </head>
 
-<body>
+<body id="body-tienda">
     <header>
         <h2>LOGO</h2>
-        <h3><a href="../index.html">Volver</a></h3>
+
     </header>
     <nav>
-        <ul>
+        <ul class="animate__animated animate__backInLeft">
             <li><a href="../index.html">Inicio</a></li>
             <li><a href="./partidos.html">Partidos actuales</a></li>
             <li><a href="./historia.html">Historia</a></li>
@@ -29,16 +30,12 @@
     <!-- Tienda de camisetas con talles y variedades -->
 
     <main>
-    <!-- Primera tabla -->
-        
-        <div id="fotos-camisetas">
-            <img width="650" src="../assets/img/camisetas2.jpg" alt="Foto de camisetas">
-            <img width="650" src="../assets/img/camisetas3.jpg" alt="Foto de camisetas">
-            <img width="650" src="../assets/img/camisetas1.jpg" alt="Foto de camisetas">
-        </div>
-        
-        <div id="formula">
-            <fieldset>
+
+
+        <div> <img id="foto-camisetas-1" class="animate__animated animate__fadeInUpBig" width="650" src="../assets/img/camisetas2.jpg" alt="Foto de camisetas"></div>
+        <!-- Primera tabla -->
+        <div>
+            <fieldset id="tienda-1">
                 <form>
                     <label for="camiseta">Elija una camiseta</label>
                     <select id="camiseta" name="shirt">
@@ -62,10 +59,16 @@
                 </form>
                 <input type="submit">
             </fieldset>
+        </div>
 
-            <!-- Segunda tabla -->
 
-            <fieldset>
+
+        <div> <img id="foto-camisetas-2" class="animate__animated animate__fadeInUpBig" width="650" src="../assets/img/camisetas3.jpg" alt="Foto de camisetas"></div>
+
+        <!-- Segunda tabla -->
+
+        <div>
+            <fieldset id="tienda-2">
                 <form>
                     <label for="camiseta">Elija una camiseta</label>
                     <select id="camiseta" name="shirt">
@@ -85,10 +88,14 @@
                 </form>
                 <input type="submit">
             </fieldset>
+        </div>
 
-            <!-- Tercer tabla -->
+        <div> <img id="foto-camisetas-3" class="animate__animated animate__fadeInUpBig" width="650" src="../assets/img/camisetas1.jpg" alt="Foto de camisetas"></div>
 
-            <fieldset>
+        <!-- Tercer tabla -->
+
+        <div>
+            <fieldset id="tienda-3">
                 <form>
                     <label for="camiseta">Elija una camiseta</label>
                     <select id="camiseta" name="shirt">
@@ -110,6 +117,10 @@
                 <input type="submit">
             </fieldset>
         </div>
+
+
+
+
     </main>
     <footer>
     </footer>
